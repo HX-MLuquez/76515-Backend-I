@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de Eventos en JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #miBoton {
+        margin-bottom: 20px;
+      }
+      #miFormulario {
+        margin-top: 20px;
+      }
+      #miFormulario input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      #miFormulario button {
+        background-color: #28a745;
+      }
+      #miFormulario button:hover {
+        background-color: #218838;
+      }
+      #miEnlace {
+        display: block;
+        margin-top: 20px;
+        color: #007bff;
+        text-decoration: none;
+      }
+      #miEnlace:hover {
+        text-decoration: underline;
+      }
+      #miEnlace:visited {
+        color: #0056b3;
+      }
+      #miEnlace:active {
+        color: #004085;
+      }
+      #miEnlace:focus {
+        outline: 2px solid #0056b3;
+      }
+      #miEnlace:focus-visible {
+        outline: 2px solid #0056b3;
+      }
+      #miEnlace:focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      #miCaja {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ejemplo de Eventos en JavaScript</h1>
+      <p>Haz clic en el botón para cambiar el color de la caja.</p>
+      <button id="miBoton">Clicame</button>
+      <div id="miCaja"></div>
+      <form id="miFormulario">
+        <input type="text" placeholder="Escribe algo..." />
+        <button type="submit">Enviar</button>
+      </form>
+      <button id="botonContexto">Cambia mi color</button>
+      <a href="https://lichess.org" id="miEnlace">Soy un enlace que re-direct a LiChess</a>
+    </div>
+    <script src="addEventListener.js"></script>
+  </body>
+</html>
