@@ -2,7 +2,7 @@
 
 - https://github.com/HX-MLuquez/{numero-de-la-comision}-Backend-I
 
-Ejemplo: https://github.com/HX-MLuquez/99999-Backend-I
+Ejemplo: https://github.com/HX-MLuquez/76515-Backend-I
 
 ## En este repositorio iremos trabajando y guardando todo el material del curso
 
