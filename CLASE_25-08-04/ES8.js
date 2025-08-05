@@ -17,12 +17,17 @@ console.log(Object.values(animal).length);
 
 // NULLISH
 
-var nana = false;
+var nana = 0;
 
 let nombre = nana && nana;
 console.log(nombre);
 let nombre2 = nana || "Nina"; // undefined null vacío o CERO (0) ""
 console.log(nombre2);
+
+const listOld = undefined
+const newList = listOld || []
+const resultS = newList.map(()=>{})
+
 
 let nombre3 = nana ?? "nulishshshshhh";
 console.log(nombre3);
@@ -35,6 +40,9 @@ if(nana){
 }
 let result = nana ? "holis" : "chau"
 console.log(result)
+
+// if(nana){resultZ=nana}else{resultZ=[]}
+let resultZ = nana ? nana : []
 //*------------------------------------------------------------------
 //*------------------------------------------------------------------
 //*------------------------------------------------------------------

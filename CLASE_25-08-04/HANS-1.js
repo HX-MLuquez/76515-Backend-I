@@ -13,22 +13,34 @@ class TicketManager {
     lugar,
     precio,
     capacidad,
-    eventoId,
     fecha = new Date()
   ) {
-    
+    const eventoNuevo = {
+      nombre,
+      id: eventoId,
+      lugar,
+      precio: precio + precio * this.#precioBaseDeGanancia,
+      capacidad,
+      fecha,
+      participantes: [],
+    };
+    this.eventoId++;
+    this.eventos.push(eventoNuevo);
   };
 
-//   getEventos = function () {
-//     return this.eventos;
-//   };
-
+  //   getEventos = function () {
+  //     return this.eventos;
+  //   };
 }
 
 TicketManager.prototype.getEventos = function () {
-
+  return this.eventos;
 };
 
+const titititi = new TicketManager(); // titititi - {precioBaseDeGanancia:0.15, eventos:[], agregarEvento: func, getEventos: func}
+titititi.agregarEvento("Hulk", "Mza", 101, 23);
+// titititi - {precioBaseDeGanancia:0.15, eventos:[{"Hulk", "Mza", 101, 23}], agregarEvento: func, getEventos: func}
+// titititi.eventos -> [{"Hulk", "Mza", 101, 23}]
 // PARAMS
 // nombre
 // lugar
@@ -37,9 +49,7 @@ TicketManager.prototype.getEventos = function () {
 // fecha (hoy por defecto)
 // El método deberá crear además el campo id autoincrementable y el campo “participantes”
 // que siempre iniciará con un arreglo vacío.
-TicketManager.prototype.agregarUsuario = function (eventoId, userId) {
-
-};
+TicketManager.prototype.agregarUsuario = function (eventoId, userId) {};
 
 // Debe contar con un método “agregarUsuario” El cual recibirá:
 // id del evento (debe existir, agregar validaciones)
