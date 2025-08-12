@@ -69,16 +69,22 @@ class Persona {
   //* Es necesario declarar los campos privados con # fuera del constructor.
   #dni; // Variable privada
   #email; // Variable privada
-  constructor(dni, email, nombre, apellido, edad) {
+  // var comun a todas las instancias IVA = 9
+  static IVA = 0.21;
+  constructor(dni, email, nombre, apellido, edad, iva = 0.21) {
     this.#dni = dni; //* y Asignación de valor a la variable privada
     this.#email = email; // Asignación de valor a la variable privada
     this.nombre = nombre;
     this.apellido = apellido;
     this.edad = edad;
+    Persona.IVA = iva;
+  }
+  getIVA(){
+    return Persona.IVA
   }
   // Método para obtener el DNI
   getDni() {
-    return this.#dni.slice(3,5); // Acceso a la variable privada
+    return this.#dni.slice(3, 5); // Acceso a la variable privada
   }
   // Método para obtener el email
   getEmail() {
@@ -94,7 +100,6 @@ class Persona {
   mostrarInfo() {
     console.log(this.getInfo()); // Llamada al método para obtener la información completa
   }
-
 }
 
 const user_1 = new Persona(
@@ -113,14 +118,24 @@ user_1.mostrarInfo(); // Llamada al método para mostrar la información nuevame
 // Acceder a las variables NO privadas directamente
 console.log(user_1.nombre); // Acceso a la variable pública nombre
 console.log(user_1.apellido); // Acceso a la variable pública apellido
-
+console.log("--a->", user_1.getIVA())
+console.log("--b->", Persona.IVA)
 // Acceder a las variables privadas directamente (esto generará un error)
 // console.log(user_1.#dni);
 
-
-
-
 // Crear una instancia de la clase Persona
+
+const user_2 = new Persona(
+  "22114455",
+  "jose@gmail.com",
+  "Jose",
+  "Gonzalez",
+  25,
+  0.17
+);
+console.log("--c->", user_1.getIVA())
+console.log("--d->", Persona.IVA = 32)
+console.log("--e->", user_2.getIVA())
 
 /*
 

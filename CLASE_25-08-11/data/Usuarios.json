@@ -1,0 +1,44 @@
+[
+  {
+    "id": "422c7b44-6d9b-4761-999e-b41088af6bfd",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 25,
+    "curso": "Back I"
+  },
+  {
+    "id": "8260fd4b-905a-4e8f-8873-3e316e5a20c1",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 25,
+    "curso": "Back I"
+  },
+  {
+    "id": "6e297130-8de9-4c23-9e2e-ada6ff25f618",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 25,
+    "curso": "Back I"
+  },
+  {
+    "id": "e6f70a94-c4f4-4d36-a534-ec5165f26ef5",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 25,
+    "curso": "Back I"
+  },
+  {
+    "id": "d58ef432-608d-4169-8987-99af13c795ed",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 25,
+    "curso": "Back I"
+  },
+  {
+    "id": "834567b3-27e6-4b1f-8bac-87138f867f9c",
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 101,
+    "curso": "Back I"
+  }
+]
