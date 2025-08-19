@@ -1,0 +1,57 @@
+[
+  {
+    "id": "664f3c8a8d1d1a0f9c7a5b1a",
+    "title": "Cien años de soledad",
+    "year": 1967,
+    "author": "Gabriel García Márquez",
+    "genre": "Realismo mágico",
+    "description": "La saga de la familia Buendía en Macondo",
+    "price": 24.99,
+    "stock": 0,
+    "img": "https://images.example.com/cien-anos-soledad.jpg"
+  },
+  {
+    "id": "664f3c8a8d1d1a0f9c7a5b1b",
+    "title": "1984",
+    "year": 1949,
+    "author": "George Orwell",
+    "genre": "Distopía",
+    "description": "Una sociedad vigilada por el Gran Hermano",
+    "price": 18.50,
+    "stock": 20,
+    "img": "https://images.example.com/1984.jpg"
+  },
+  {
+    "id": "664f3c8a8d1d1a0f9c7a5b1c",
+    "title": "El Hobbit",
+    "year": 1937,
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasía",
+    "description": "El viaje de Bilbo Bolsón a la Montaña Solitaria",
+    "price": 22.95,
+    "stock": 12,
+    "img": "https://images.example.com/hobbit.jpg"
+  },
+  {
+    "id": "664f3c8a8d1d1a0f9c7a5b1d",
+    "title": "Orgullo y prejuicio",
+    "year": 1813,
+    "author": "Jane Austen",
+    "genre": "Clásico",
+    "description": "La historia de Elizabeth Bennet y Fitzwilliam Darcy",
+    "price": 16.75,
+    "stock": 18,
+    "img": "https://images.example.com/orgullo-prejuicio.jpg"
+  },
+  {
+    "id": "664f3c8a8d1d1a0f9c7a5b1e",
+    "title": "La sombra del viento",
+    "year": 2001,
+    "author": "Carlos Ruiz Zafón",
+    "genre": "Misterio",
+    "description": "Un libro misterioso en el Cementerio de los Libros Olvidados",
+    "price": 26.50,
+    "stock": 10,
+    "img": "https://images.example.com/sombra-viento.jpg"
+  }
+]

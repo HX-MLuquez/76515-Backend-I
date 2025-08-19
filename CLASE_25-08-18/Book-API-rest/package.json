@@ -1,0 +1,19 @@
+{
+  "name": "book-api-rest",
+  "version": "1.0.0",
+  "description": "├── index.js\r ├── app.js\r ├── config/\r │   └── config.js\r ├── data/\r │   └── books.json\r ├── src/\r │   ├── controllers/\r │   │   ├── books.controller.js\r │   │   └── phrase.controller.js\r │   ├── services/\r │   │   ├── books.service.js\r │   │   └── phrase.service.js\r │   ├── dao/\r │   │   ├── books.dao.js\r │   │   └── phrase.dao.js\r │   └── routes/\r │       ├── books.routes.js\r │       └── phrase.routes.js\r └── .env",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
