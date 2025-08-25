@@ -1,0 +1,21 @@
+{{!-- home handlebars integrando el header.hbs y el footer.hbs y anexar con bttn que llevan a 
+app.get("/user", (req, res) => {
+app.post("/user", (req, res) => {
+app.get("/products", (req, res) => {
+    app.get("/admin/:code", (req, res) => {
+app.get("/astucia/:message", (req, res) => { --}}
+
+<div>
+    {{> header}}
+    <div class="container">
+    <p>Ejemplo de integración de rutas con Handlebars</p>
+    <div class="content">
+        <a href="/user">User not_found</a>
+        <a href="/user?id=1234&nombre=Pepe">User</a>
+        <a href="/products">Products</a>
+        <a href="/create_user">Create User</a>
+        <a href="/astucia/No contaban con mi astucia !!!">Astucia</a>
+    </div>
+    </div>
+    {{> footer}}
+</div>

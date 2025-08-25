@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Producto 1",
+        "price": 100,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/Calculator-Math-Learn-School-256.png"
+    },
+    {
+        "id": 2,
+        "title": "Producto 2",
+        "price": 200,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/Calculator-Math-Learn-School-256.png"
+    },
+    {
+        "id": 3,
+        "title": "Producto 3",
+        "price": 300,
+        "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/Calculator-Math-Learn-School-256.png"
+    }
+]

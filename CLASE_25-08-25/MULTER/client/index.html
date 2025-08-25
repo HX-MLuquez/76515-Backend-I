@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Imágenes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #333333;
+        }
+        form {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 0 auto 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Form para subir Imágenes</h1>
+        <!-- Formulario para subir una sola imagen -->
+        <h2>Subir una imagen</h2>
+        <form id="singleForm" action="http://localhost:8080/upload/single/7686" method="post" enctype="multipart/form-data">
+            <label for="singleImage">Selecciona una imagen</label>
+            <input type="file" id="singleImage" name="image" accept="image/*" required>
+            <button type="submit">Subir Imagen</button>
+        </form>
+
+        <!-- Formulario para subir hasta 10 imágenes -->
+        <h2>Subir hasta 4 imágenes</h2>
+        <!-- Se deben de seleccionar todas las imágenes juntas, no se pueden seleccionar de a una -->
+        <form id="multipleForm" action="http://localhost:8080/upload/multiple/7686" method="post" enctype="multipart/form-data">
+            <label for="multipleImages">Selecciona hasta 4 imágenes</label>
+            <input type="file" id="multipleImages" name="images" accept="image/*" multiple required>
+            <button type="submit">Subir Imágenes</button>
+        </form>
+    </div>
+</body>
+</html>

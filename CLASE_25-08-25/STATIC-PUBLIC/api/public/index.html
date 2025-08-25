@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Mascotas</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #fff8f0;
+        color: #4a3f35;
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        color: #d2691e;
+      }
+
+      form {
+        background-color: #fff3e6;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      label {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #dcbfa6;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      button {
+        margin-top: 1.5rem;
+        background-color: #f4a261;
+        color: white;
+        padding: 0.7rem 1.2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e76f51;
+      }
+
+      .link {
+        margin-top: 1rem;
+        display: inline-block;
+        color: #8d5f3c;
+        text-decoration: none;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Agregar una Mascota</h1>
+    <form action="/api/pets" method="POST">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="age">Edad:</label>
+      <input type="number" id="age" name="age" required />
+
+      <button type="submit">Agregar Mascota</button>
+    </form>
+
+    <!-- Enlace opcional a la vista de mascotas -->
+    <!-- <a href="/view.html" class="link">Ir a la Vista de Mascotas</a> -->
+  </body>
+</html>
