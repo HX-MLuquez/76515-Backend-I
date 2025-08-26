@@ -10,20 +10,28 @@ const { paths } = require("./config/config");
 //! ------ CODE - AQUI -----------------
 //!-------------------------------------
 //* SETEO handlebars
-
+app.engine(
+  "hbs",
+  handlebars.engine({
+    extname: ".hbs",
+    defaultLayout: "main",
+  })
+);
+app.set("view engine", "hbs");
+app.set("views", paths.views);
 
 //* Middelwares
-
+app.use(express.json()); // Body {...}
+app.use(express.urlencoded({ extended: false })); // DATA FORM {} {...}
 
 //* Static
 //* Todos nuestros archivos ESTATICOS (html, css, img, etc)
 // que se encuentran en la carpeta 'public' sen van a servir en /static
-
+app.use("/static", express.static(paths.public));
 
 //!-------------------------------------
 //! ------  FIN CODE -------------------
 //!-------------------------------------
-
 
 app.get("/", (req, res) => {
   // return res.json({ APP: "HANDLEBARS" });
@@ -85,6 +93,9 @@ const products = [
 app.get("/products", (req, res) => {
   const context = {
     products,
+    auto:{
+      marca: "BMW"
+    }
   };
   return res.render("pages/products", context);
 });

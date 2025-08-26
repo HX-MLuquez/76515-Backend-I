@@ -11,14 +11,30 @@ const multer = require("multer");
 //!-------------------------------------
 //* Config Multer
 // const upload = multer({ dest: "uploads/" }); // config simple por defecto
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads/");
+  },
+  // * ACA usamos este filename para renombrar el path 82376786981243 -> img-44-simple.jpg
+  filename: (req, file, cb) => {
+    const originalName = `img-${req.params.id}-${file.originalname}`;
+    //* Lo guardamos en el objeto req.query para usarlo en el controlador
+    req.query.filename = originalName;
+    cb(null, originalName);
+  },
+});
+const upload = multer({ storage: storage });
 
 
-
-//* MIDDELWARE - EL ORDEN ES ESCENCIAL
+//* MIDDELWARE - EL ORDEN ES ESCENCIAL - VAN UP de todo .use -> a todo lo que está debajo por ende a todas las rutas
+app.use(logger("dev"));
+app.use(express.json()); // DATA x BODY  {} -> {...}
+app.use(express.urlencoded({ extended: false })); // DATA FORM {} {...}
 
 //* Middleware para servir archivos estáticos desde la carpeta "uploads"
 // Otras carpetas que se pueden servir son: public, assets, static, etc
-
+app.use("/uploads", express.static(paths.upload));
+app.use("/static", express.static(paths.public));
 
 //!-------------------------------------
 //! ------  FIN CODE -------------------
@@ -30,7 +46,7 @@ function miMiddelware(req, res, next) {
   next();
 }
 
-app.use(miMiddelware);
+// app.use(miMiddelware);
 
 app.get("/", (req, res) => {
   res.json({ HULK: "APLASTA" });
@@ -38,9 +54,15 @@ app.get("/", (req, res) => {
 
 //* -> http://localhost:8080/upload/single/123 - form-data key='image'
 
+
+// ----->                            'key'
+// app.post("/queloco", upload.single("image"), async (req, res) => {
+//   console.log("---> ", req.file); 
+// })
+
 app.post("/upload/single/:id", upload.single("image"), async (req, res) => {
   try {
-    console.log("---> ", req.file); //* en File está la data de la img
+    console.log("---> ", req.file); //* en File está la data de la img  {image: undefined}
     // res.send(`imagen del Usuario guardada ${req.file.originalname}`)
     //* Mostramos la imagen en el navegador que su filename la dejamos en el query
     res.send(`

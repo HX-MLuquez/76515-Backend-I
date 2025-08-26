@@ -33,6 +33,7 @@ En una API REST ya sea con tech MERN o PERN
 ```bash
 project/
 │
+├── public/
 ├── src/
 |   ├── managers/  - data-access/ -  data-access-object/ o dao/ - repositories/ - o en los mismos services/
 │   |   └── userManager.js

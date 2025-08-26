@@ -5,6 +5,7 @@ app.get("/user/create", (req, res) => {
 y con los campos nombre, edad, email --}}
 <div class="userBody">
     <h2>Crear Usuario</h2>
+    {{> header}}
     <form action="/user" method="POST">
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre" required>

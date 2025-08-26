@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Servir archivos estáticos desde la carpeta "public"
-app.use(express.static(paths.public));
+app.use(express.static(paths.public)); 
 
 // Usar el router de pets
 app.use("/api/pets", petsRouter);

@@ -9,13 +9,14 @@ app.get("/astucia/:message", (req, res) => { --}}
     {{> header}}
     <div class="container">
     <p>Ejemplo de integración de rutas con Handlebars</p>
-    <div class="content">
+    {{!-- <div class="content">
         <a href="/user">User not_found</a>
         <a href="/user?id=1234&nombre=Pepe">User</a>
         <a href="/products">Products</a>
         <a href="/create_user">Create User</a>
         <a href="/astucia/No contaban con mi astucia !!!">Astucia</a>
+    </div> --}}
     </div>
-    </div>
+    {{!-- import footer.hbs --}}
     {{> footer}}
 </div>
