@@ -78,6 +78,6 @@ my-mehen-app/
 ├── .gitignore
 ├── package.json
 ├── package-lock.json
-├── server.js
+├── index.js
 └── README.md
 ```
