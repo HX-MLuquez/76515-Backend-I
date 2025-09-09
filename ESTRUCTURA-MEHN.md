@@ -1,9 +1,9 @@
-# Estructura Profesional App SSR - Stack MEHEN
+# Estructura Profesional App SSR - Stack MEHN
 
 ## 📁 Estructura de Carpetas
 
 ```
-my-mehen-app/
+my-mehn-app/
 ├── 📁 src/
 │   ├── 📁 config/
 │   │   ├── database.js
